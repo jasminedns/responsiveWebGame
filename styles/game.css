@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100vh;
+}
+
+body {
+    background-image: url(../images/background.png);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    height: 100%;
+    margin: 0;
+}
+
+header {
+    padding: 16px;
+}
+
+header h1 {
+    color: #63300c;
+    font-family: Quintessantial;
+    font-size: 4rem;
+    margin: 24px;
+    text-align: center;
+}
+
+main {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.main__text {
+    background-color: #63300c;
+    border-radius: 10px;
+    color: white;
+    padding: 16px;
+    width: 50%;
+}
+
+.text {
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.button {
+    cursor: pointer;
+}
+
+.buttons--page {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.buttons--page__next {
+    background-color: rgba(208, 208, 208, 0.771);
+    border-radius: 10px;
+    font-weight: 500;
+    margin-top: 16px;
+    text-align: center;
+    padding: 8px;
+    width: 20%;
+}
+
+.buttons--characters {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 16px 0;
+}
+
+.buttons--characters__name {
+    align-content: center;
+    background-color: cadetblue;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: 500;
+    justify-content: center;
+    text-align: center;
+    padding: 8px;
+    width: 20%;
+}
