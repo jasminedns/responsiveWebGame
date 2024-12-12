@@ -28,17 +28,19 @@ function allHeroes (name, Class, race, background, abilities, equipment, descrip
 }
 
 const heroesSheet = () => {
-    heroes.push(new allHeroes("Sir Cedric The Brave",))
-    heroes.push(new allHeroes("Elara The Wise",))
-    heroes.push(new allHeroes("Darpas The Starving One",))
-    heroes.push(new allHeroes("Bruna The Bold",))
+    heroes.push(new allHeroes(`Sir Cedric The Brave`,`Paladin`, `Human`, `Noble`, `High Strength and Charisma`, `Longsword, Shield, Chain Mail`, 
+        `Sir Cedric is a valiant knight dedicated to protecting the innocent. His divine powers allow him to deal extra radiant damage to Gruk, and his 
+        healing abilities can keep him in the fight.` ))
+    heroes.push(new allHeroes(`Elara The Wise`,))
+    heroes.push(new allHeroes(`Darpas The Starving One`,))
+    heroes.push(new allHeroes(`Bruna The Bold`,))
 }
 
 heroesSheet();
 
 $( () => { 
-    $("h1").text("The Titan's Fall")
-    $(".buttons--page__next").text("Next")
+    $("h1").text(`The Titan's Fall`)
+    $(".buttons--page__next").text(`Next`)
     $(".text").text(mainText[currentPage]);
     $(".buttons--characters").hide();
 
@@ -61,8 +63,16 @@ $( () => {
             $(".buttons--characters__name").each((index, element) => {
                 $(element).text(heroes[index].name)
             });
-            $(".buttons--characters__name").on("click", () => {
-
+            $(".buttons--characters__name").on("click", (event) => {
+                const clickedElement = $(event.target)
+                $(".buttons--characters").hide(); 
+                $(".text").text(`You chose: ${clickedElement.text()}
+                Class: ${clickedElement.Class}
+                Race: ${clickedElement.race}
+                Background: ${clickedElement.background}
+                Abilities: ${clickedElement.abilities}
+                Equipment: ${clickedElement.equipment}
+                Description: ${clickedElement.description}`)        
             })
         } else { 
             $(".buttons--characters").hide(); 
