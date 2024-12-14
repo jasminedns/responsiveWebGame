@@ -78,14 +78,16 @@ main {
     width: 20%;
 }
 
-.buttons--characters {
+.buttons--characters,
+.buttons--actions {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin: 16px 0;
 }
 
-.buttons--characters__name {
+.buttons--characters__name,
+.buttons--chooseAction {
     align-content: center;
     background-color: #3f6a6a;
     border-radius: 10px;
