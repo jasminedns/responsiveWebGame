@@ -80,8 +80,17 @@ const rollAndSave = () => {
     rolls.unshift(userRoll);
 }
 
-const zeroHealth = (characterHealth) => {
-    return characterHealth = 0;
+function updateHealth() { 
+    if (userHealth < 0) { 
+        userHealth = 0; 
+    } 
+
+    if (ogreHealth < 0) { 
+        ogreHealth = 0; 
+    } 
+
+    $(".userHealth").text(`YOUR HEALTH: ${userHealth}/20`); 
+    $(".ogreHealth").text(`OGRE'S HEALTH: ${ogreHealth}/20`); 
 }
 
 $( () => { 
@@ -109,7 +118,7 @@ $(document).ready(() => {
             $(".buttons--page__next").hide(); 
             $(".buttons--characters__name").each((index, element) => { 
                 $(element).text(heroes[index].name); }); 
-                
+
                 $(".buttons--characters__name").on("click", (event) => { 
                     $(".buttons--characters").hide(); 
                     const clickedElement = $(event.target); 
@@ -164,25 +173,23 @@ $(document).ready(() => {
                                 ogre stumbles backwards as you grin from ear to ear and shout: "Sorry big guy, but I think it's time to put you to sleep. Go get your safety 
                                 blanket!"`; 
                                 ogreHealth -= MAJOR_DAMAGE; 
-                                if (ogreHealth <= 0) zeroHealth(ogreHealth);
                             } 
 
                             $(".text").text(mainText[6]); 
-                            $(".userHealth").text(`YOUR HEALTH: ${userHealth}/20`); 
-                            $(".ogreHealth").text(`OGRE'S HEALTH: ${ogreHealth}/20`); 
+                            updateHealth()
                         } else { 
                             $(".buttons--chooseAction").hide();  
 
                             if (userHealth <= 0) { 
-                                mainText[7] = `The hero's vision blurred, and the world around them began to fade. The hero's sacrifice had not been in vain, for they had weakened 
+                                mainText[6] = `The hero's vision blurred, and the world around them began to fade. The hero's sacrifice had not been in vain, for they had weakened 
                                 the ogre enough for the villagers to rally and drive the beast away. But the hero's journey had come to a tragic end. YOU DIED`; 
                             } else if (ogreHealth <= 0) { 
-                                mainText[7] = `The beast let out a guttural cry before collapsing to the ground, defeated. The hero puts back his sword and made their way back to 
+                                mainText[6] = `The beast let out a guttural cry before collapsing to the ground, defeated. The hero puts back his sword and made their way back to 
                                 the village, where celebration awaited. As they entered the village, the hero was met with cheers and applause. The hero smiled, knowing that they 
                                 had brought peace and safety back to their home. The ogre was no more, and the village could finally rest easy. CONGRATS, YOU WON!`; 
                             } 
 
-                            $(".text").text(mainText[7]); 
+                            $(".text").text(mainText[6]); 
                             winner = true; 
                         }
                     }
@@ -232,22 +239,21 @@ $(document).ready(() => {
                             }
 
                             $(".text").text(mainText[6]); 
-                            $(".userHealth").text(`YOUR HEALTH: ${userHealth}/20`); 
-                            $(".ogreHealth").text(`OGRE'S HEALTH: ${ogreHealth}/20`);
+                            updateHealth()
                              
                         } else { 
                             $(".buttons--chooseAction").hide();  
 
                             if (userHealth <= 0) { 
-                                mainText[7] = `The hero's vision blurred, and the world around them began to fade. The hero's sacrifice had not been in vain, for they had weakened 
+                                mainText[6] = `The hero's vision blurred, and the world around them began to fade. The hero's sacrifice had not been in vain, for they had weakened 
                                 the ogre enough for the villagers to rally and drive the beast away. But the hero's journey had come to a tragic end. YOU DIED`; 
                             } else if (ogreHealth <= 0) { 
-                                mainText[7] = `The beast let out a guttural cry before collapsing to the ground, defeated. The hero puts back his sword and made their way back to 
+                                mainText[6] = `The beast let out a guttural cry before collapsing to the ground, defeated. The hero puts back his sword and made their way back to 
                                 the village, where celebration awaited. As they entered the village, the hero was met with cheers and applause. The hero smiled, knowing that they 
                                 had brought peace and safety back to their home. The ogre was no more, and the village could finally rest easy. CONGRATS, YOU WON!`; 
                             } 
 
-                            $(".text").text(mainText[7]); 
+                            $(".text").text(mainText[6]); 
                             winner = true; 
                         }
                     }
