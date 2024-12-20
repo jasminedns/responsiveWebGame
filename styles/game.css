@@ -79,7 +79,8 @@ main {
 }
 
 .buttons--characters,
-.buttons--actions {
+.buttons--actions,
+.buttons--fleeAnswer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -87,7 +88,9 @@ main {
 }
 
 .buttons--characters__name,
-.buttons--chooseAction {
+.buttons--chooseAction,
+.buttons--fleeAnswer__yes,
+.buttons--fleeAnswer__no {
     align-content: center;
     background-color: #3f6a6a;
     border-radius: 10px;
@@ -111,7 +114,8 @@ footer {
     justify-content: end;
 }
 
-.userHealth {
+.userHealth,
+.ogreHealth {
     background-color: #99122d;
     border-radius: 10px;
     color: white;
