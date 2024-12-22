@@ -113,6 +113,9 @@ function replay() {
         $(".buttons--characters").hide();
         $(".healthBars").show();
         $(".button--replay").hide();
+        $(".text--gameover").hide();
+        $(".text--win").hide();
+        $(".text--lost").hide();
         updateHealth();
     })
 }
@@ -124,11 +127,14 @@ function finalMessage() {
         mainText[6] = `The hero's vision blurred, and the world around them began to fade. The hero's sacrifice had not been in vain, for they had weakened 
         the ogre enough for the villagers to rally and drive the beast away. But the hero's journey had come to a tragic end. YOU DIED`; 
         loss++
+        $(".text--gameover").fadeIn(1000).delay(4000)
+        
     } else if (ogreHealth <= 0) { 
         mainText[6] = `The beast let out a guttural cry before collapsing to the ground, defeated. The hero puts back his sword and made their way back to 
         the village, where celebration awaited. As they entered the village, the hero was met with cheers and applause. The hero smiled, knowing that they 
         had brought peace and safety back to their home. The ogre was no more, and the village could finally rest easy. CONGRATS, YOU WON!`; 
         win++
+        $(".text--win").fadeIn(1000).delay(4000)
     } else {
         mainText[6] = `Fine, I tried... The village elder cannot believe her eyes while she sees you already there - she knows you ran away. 
         The villagers start grouping, shouting and you can feel the tension. The elder raises her hand to silence the crowd. You start 
@@ -139,6 +145,7 @@ function finalMessage() {
         still hear some of the villagers calling you names. You think: well, at least I won't have to deal with that ogre anymore.
         GAME OVER. (I'll count it as a loss by the way)`;
         loss++;
+        $(".text--gameover").fadeIn(1000).delay(4000)
     }
 
     $(".text").text(mainText[6]); 
@@ -162,8 +169,10 @@ $( () => {
     $(".button--replay").hide().text(`Replay`)
     $(".overlay--start").text("The Titan's Fall").fadeIn().delay(500).fadeOut(700)
     $(".overlay").delay(1200).fadeOut()
-    
-    
+    $(".text--gameover").text("GAME OVER").hide()
+    $(".text--win").text("CONGRATS, YOU WON!").hide()
+    $(".text--lost").text("YOU DIED").hide()
+            
     $(".buttons--page__next").on("click", () => { 
         if (currentPage < mainText.length - 1) { 
             currentPage++; $(".text").text(mainText[currentPage]); 

@@ -36,6 +36,8 @@ main {
 }
 
 .main__text {
+    display: flex;
+    flex-direction: column;
     background-color: #63300c;
     border-radius: 10px;
     color: white;
@@ -45,6 +47,14 @@ main {
 
 .text {
     font-size: 1.1rem;
+    text-align: center;
+}
+
+.text--gameover,
+.text--win,
+.text--lose {
+    font-size: 1.5rem;
+    font-weight: bolder;
     text-align: center;
 }
 
