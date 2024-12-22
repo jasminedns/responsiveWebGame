@@ -159,7 +159,9 @@ $( () => {
     $(".footer__counter").show();
     $(".counter__wins").text(`WINS: ${win}`)
     $(".counter__losses").text(`LOSSES: ${loss}`)
-    $(".button--replay").hide().text(`Replay`);
+    $(".button--replay").hide().text(`Replay`)
+    $(".overlay--start").text("The Titan's Fall").fadeIn().delay(500).fadeOut(700)
+    $(".overlay").delay(1200).fadeOut()
     
     
     $(".buttons--page__next").on("click", () => { 
@@ -315,11 +317,15 @@ $( () => {
                             updateHealth()
 
                         } else {
-                            mainText[6] = `Yes! You rolled a ${userRoll}! As the ogre swings its massive club, you decide that leaving to fight another day sounds like a fantastic idea. 
-                            You seize the moment and decide to make a run for it. You start running towards the village, dodging trees and leaping over roots. The ogre starts running 
-                            after you, he's faster than you thought when all of a suddden your hear a female voice that says: "Hey there, big boy". You turn around confused and see a 
-                            female ogre stepping out from behind a boulder, batting her eyelashes at your pursuer. The male ogre, unprepared, can only say "Uh, hi.. I was just, uh, 
-                            smashing some pathetic human but I guess I can take a break."`
+                            mainText[6] = `Yes! You rolled a ${userRoll}! Fine, I tried... The village elder cannot believe her eyes while she sees you already there - she knows you ran away. 
+                            The villagers start grouping, shouting and you can feel the tension. The elder raises her hand to silence the crowd. You start 
+                            explaining the situation and why you decided to flee instead of trying to slay the ogre, but they don't look happy. The elder 
+                            gets tired and asks the whole village to raise their hand if they want to banish the - and I quote - "coward". Hands shoot up 
+                            around you, every single person, even the children raise their hands. You try once again to defend yourself asking for another 
+                            chance. You see that the village doesn't care about you so you pick your things up and leave. While you're walking away you can 
+                            still hear some of the villagers calling you names. You think: well, at least I won't have to deal with that ogre anymore.
+                            GAME OVER. (I'll count it as a loss by the way)`;
+                            loss++
 
                             $(".text").text(mainText[6]); 
                             finalMessage()

@@ -143,3 +143,22 @@ footer {
     order: 1;
     background-color: transparent;
 }
+
+.overlay {
+    align-items: center;
+    background-image: url(../images/background.png);
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+.overlay--start {
+    color: #63300c;
+    font-family: Quintessantial;
+    font-size: 4rem;
+    font-weight: bolder;
+    display: none;
+}
