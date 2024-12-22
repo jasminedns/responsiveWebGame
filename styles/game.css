@@ -100,6 +100,22 @@ main {
     width: 20%;
 }
 
+.buttons--replay {
+    display: flex;
+    justify-content: center;
+}
+
+.button--replay {
+    width: 20%;
+
+    background-color: #3f6a6a;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 500;
+    margin: 16px;
+    padding: 8px;
+}
+
 footer {
     background-color: transparent;
     display: flex;
