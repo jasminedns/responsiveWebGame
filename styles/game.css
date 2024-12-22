@@ -79,8 +79,7 @@ main {
 }
 
 .buttons--characters,
-.buttons--actions,
-.buttons--fleeAnswer {
+.buttons--actions {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -88,9 +87,7 @@ main {
 }
 
 .buttons--characters__name,
-.buttons--chooseAction,
-.buttons--fleeAnswer__yes,
-.buttons--fleeAnswer__no {
+.buttons--chooseAction {
     align-content: center;
     background-color: #3f6a6a;
     border-radius: 10px;
@@ -105,22 +102,44 @@ main {
 
 footer {
     background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     width: 100%;
 }
 
 .healthBars {
+    order: 2;
     display: flex;
     flex-direction: row;
     justify-content: end;
 }
 
 .userHealth,
-.ogreHealth {
+.ogreHealth,
+.counter__wins,
+.counter__losses {
     background-color: #99122d;
     border-radius: 10px;
     color: white;
     font-weight: bolder;
-    margin: 16px;
     text-align: center;
     padding: 8px;
+}
+
+.userHealth,
+.ogreHealth {
+    display: flex;
+    align-items: center;
+    margin: 16px;
+}
+
+.counter__wins,
+.counter__losses {
+    margin: 8px 16px;
+}
+
+.footer__counter {
+    order: 1;
+    background-color: transparent;
 }
