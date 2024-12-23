@@ -1,6 +1,4 @@
 let currentPage = 0;
-const MINOR_DAMAGE = 2;
-const MAJOR_DAMAGE = 4;
 let rolls = [];
 let userRoll;
 let userHealth = 20;
@@ -8,6 +6,8 @@ let ogreHealth = 20;
 let winner = false;
 let win = 0;
 let loss = 0;
+const MINOR_DAMAGE = 2;
+const MAJOR_DAMAGE = 4;
 const actions = ["ATTACK", "HEAL", "FLEE", "CHAT"];
 const mainText = []
 
@@ -269,20 +269,20 @@ $( () => {
                                 glowing vial, uncorks it and takes it down in one gulp. Everything starts to burn. The potion they grabbed was not a healing elixir, but a vial 
                                 of poison meant for the ogre that is grinning while watching you suffer.`
                                 userHealth -= MINOR_DAMAGE;
-                            if (userHealth <= 0) zeroHealth(userHealth);
+                                updateHealth()
                             } else {
                                 mainText[6] = `Let's go! Oh no... You rolled a ${userRoll}... The hero reaches into their sachel in seach of a healing potion. With a sigh of 
                                 relief, the hero pulls out a glowing vial, uncorks it and takes it down in one gulp. Everything starts to burn. The potion they grabbed was not 
                                 a healing elixir, but a vial of poison meant for the ogre that is grinning while watching you suffer.`
                                 userHealth -= MINOR_DAMAGE;
-                                if (userHealth <= 0) zeroHealth(userHealth);
+                                updateHealth()
                             } 
                         } else if (userRoll >= 8 && userRoll <= 12) {
                             mainText[6] = `In the heat of battle, the hero reaches into their satchel, intending to grab a healing potion. Instead, their fingers close around 
                                 a vial of poison. Realizing the mistake just in time, the hero swiftly hurls the vial at the charging ogre. The glass shatters against the ogre's 
                                 chest, and the toxic liquid splashes over its skin.`
                             ogreHealth -= MINOR_DAMAGE
-                            if (ogreHealth <= 0) zeroHealth(ogreHealth)
+                            updateHealth()
                         } else {
                             if (userHealth === 20) {
                                 mainText[6] = `Congrats, you rolled a ${userRoll}! Unfortunately you can't use it.. Oh you want to know why? CAUSE YOU HAVE FULL HEALTH ALREADY! 
