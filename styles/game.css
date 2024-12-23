@@ -38,148 +38,6 @@ header h1 {
     text-align: center;
 }
 
-main {
-    align-items: center;
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-}
-
-.main__text {
-    display: flex;
-    flex-direction: column;
-    background-color: #63300c;
-    border-radius: 10px;
-    color: white;
-    padding: 16px;
-    width: 50%;
-}
-
-.text {
-    font-size: 1.1rem;
-    text-align: center;
-}
-
-.text--gameover,
-.text--win,
-.text--lose {
-    font-size: 1.5rem;
-    font-weight: bolder;
-    text-align: center;
-}
-
-.buttons {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-}
-
-.button {
-    cursor: pointer;
-}
-
-.button:hover {
-    font-weight: bolder;
-}
-
-.buttons--page {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
-.buttons--page__next {
-    background-color: rgba(208, 208, 208, 0.771);
-    border-radius: 10px;
-    font-weight: 500;
-    margin-top: 16px;
-    text-align: center;
-    padding: 8px;
-    width: 20%;
-}
-
-.buttons--characters,
-.buttons--actions {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 16px 0;
-}
-
-.buttons--characters__name,
-.buttons--chooseAction {
-    align-content: center;
-    background-color: #3f6a6a;
-    border-radius: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    font-weight: 500;
-    justify-content: center;
-    text-align: center;
-    padding: 8px;
-    width: 20%;
-}
-
-.buttons--replay {
-    display: flex;
-    justify-content: center;
-}
-
-.button--replay {
-    width: 20%;
-
-    background-color: #3f6a6a;
-    border-radius: 10px;
-    text-align: center;
-    font-weight: 500;
-    margin: 16px;
-    padding: 8px;
-}
-
-footer {
-    background-color: transparent;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.healthBars {
-    order: 2;
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-}
-
-.userHealth,
-.ogreHealth,
-.counter__wins,
-.counter__losses {
-    background-color: #99122d;
-    border-radius: 10px;
-    color: white;
-    font-weight: bolder;
-    text-align: center;
-    padding: 8px;
-}
-
-.userHealth,
-.ogreHealth {
-    display: flex;
-    align-items: center;
-    margin: 16px;
-}
-
-.counter__wins,
-.counter__losses {
-    margin: 8px 16px;
-}
-
-.footer__counter {
-    order: 1;
-    background-color: transparent;
-}
-
 .overlay {
     align-items: center;
     background-image: url(../images/background.png);
@@ -199,12 +57,150 @@ footer {
     display: none;
 }
 
+main {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main__text {
+    background-color: #63300c;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    width: 50%;
+}
+
+.text {
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.text--finalmessage {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.button {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.button:hover {
+    font-weight: bolder;
+}
+
+.buttons--characters,
+.buttons--actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 16px 0;
+}
+
+.buttons--characters__name,
+.buttons--chooseAction {
+    align-content: center;
+    background-color: #3f6a6a;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: 500;
+    justify-content: center;
+    padding: 8px;
+    text-align: center;
+    width: 20%;
+}
+
+.buttons--page {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.buttons--page__next {
+    background-color: rgba(208, 208, 208, 0.771);
+    border-radius: 10px;
+    font-weight: 500;
+    margin-top: 16px;
+    padding: 8px;
+    text-align: center;
+    width: 20%;
+}
+
+.buttons--replay {
+    display: flex;
+    justify-content: center;
+}
+
+.button--replay {
+    background-color: #3f6a6a;
+    border-radius: 10px;
+    font-weight: 500;
+    margin: 16px;
+    padding: 8px;
+    text-align: center;
+    width: 20%;
+}
+
+footer {
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.healthBars {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    order: 2;
+}
+
+.userHealth,
+.ogreHealth,
+.counter__wins,
+.counter__losses {
+    background-color: #99122d;
+    border-radius: 10px;
+    color: white;
+    font-weight: bolder;
+    padding: 8px;
+    text-align: center;
+}
+
+.userHealth,
+.ogreHealth {
+    align-items: center;
+    display: flex;
+    margin: 16px;
+}
+
+.counter__wins,
+.counter__losses {
+    margin: 8px 16px;
+}
+
+.footer__counter {
+    background-color: transparent;
+    order: 1;
+}
+
 @media screen and (max-width: 768px) {
 
-    .overlay--start {
-        font-size: 3rem;
-    }
-
+    .overlay--start,
     header h1 {
         font-size: 3rem;
     }
@@ -219,9 +215,9 @@ footer {
 
     .buttons--characters,
     .buttons--actions {
+        align-items: center;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
     }
 
     .buttons--characters__name,
