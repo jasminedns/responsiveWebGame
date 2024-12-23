@@ -100,6 +100,7 @@ function updateCounter() {
     $(".counter__losses").text(`LOSSES: ${loss}`)
 }
 
+
 function replay() {
     $(".button--replay").show();
     $(".button--replay").on("click", () => {

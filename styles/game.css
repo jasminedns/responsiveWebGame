@@ -188,3 +188,40 @@ footer {
     font-weight: bolder;
     display: none;
 }
+
+@media screen and (max-width: 768px) {
+
+    .overlay--start {
+        font-size: 3rem;
+    }
+
+    header h1 {
+        font-size: 3rem;
+    }
+
+    .main__text {
+        width: 80%;
+    }
+
+    .text--finalmessage {
+        text-align: center;
+    }
+
+    .buttons--characters,
+    .buttons--actions {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .buttons--characters__name,
+    .buttons--chooseAction {
+        margin: 16px;
+        width: 80%;
+    }
+
+    .buttons--page__next,
+    .button--replay {
+        width: 40%;
+    }
+}
