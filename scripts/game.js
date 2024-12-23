@@ -125,14 +125,14 @@ function finalMessage() {
 
     if (userHealth <= 0) { 
         mainText[6] = `The hero's vision blurred, and the world around them began to fade. The hero's sacrifice had not been in vain, for they had weakened 
-        the ogre enough for the villagers to rally and drive the beast away. But the hero's journey had come to a tragic end. YOU DIED`; 
+        the ogre enough for the villagers to rally and drive the beast away. But the hero's journey had come to a tragic end.`; 
         loss++
-        $(".text--gameover").fadeIn(1000).delay(4000)
+        $(".text--lost").fadeIn(1000).delay(4000)
         
     } else if (ogreHealth <= 0) { 
         mainText[6] = `The beast let out a guttural cry before collapsing to the ground, defeated. The hero puts back his sword and made their way back to 
         the village, where celebration awaited. As they entered the village, the hero was met with cheers and applause. The hero smiled, knowing that they 
-        had brought peace and safety back to their home. The ogre was no more, and the village could finally rest easy. CONGRATS, YOU WON!`; 
+        had brought peace and safety back to their home. The ogre was no more, and the village could finally rest easy.`; 
         win++
         $(".text--win").fadeIn(1000).delay(4000)
     } else {
@@ -143,7 +143,7 @@ function finalMessage() {
         around you, every single person, even the children raise their hands. You try once again to defend yourself asking for another 
         chance. You see that the village doesn't care about you so you pick your things up and leave. While you're walking away you can 
         still hear some of the villagers calling you names. You think: well, at least I won't have to deal with that ogre anymore.
-        GAME OVER. (I'll count it as a loss by the way)`;
+        (I'll count it as a loss by the way)`;
         loss++;
         $(".text--gameover").fadeIn(1000).delay(4000)
     }
