@@ -1,3 +1,13 @@
+@font-face {
+    font-family: Grenze;
+    src: url(../fonts/Grenze/Grenze-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: Grenze;
+    src: url(../fonts/Grenze/Grenze-Medium.ttf);
+}
+
 * {
     box-sizing: border-box;
 }
@@ -10,7 +20,7 @@ body {
     background-image: url(../images/background.png);
     display: flex;
     flex-direction: column;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Grenze;
     font-size: 1rem;
     height: 100%;
     margin: 0;
@@ -22,7 +32,7 @@ header {
 
 header h1 {
     color: #63300c;
-    font-family: Quintessantial;
+    font-family: Grenze;
     font-size: 4rem;
     margin: 24px;
     text-align: center;
@@ -183,7 +193,7 @@ footer {
 
 .overlay--start {
     color: #63300c;
-    font-family: Quintessantial;
+    font-family: Grenze;
     font-size: 4rem;
     font-weight: bolder;
     display: none;
